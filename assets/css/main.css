@@ -1768,6 +1768,8 @@ input, select, textarea {
 		.image.chhota {
 			width: 25px;
 			height: 25px;
+			background-size: cover;
+			background-position: center;
 		}	
 
 		.image.fit {
