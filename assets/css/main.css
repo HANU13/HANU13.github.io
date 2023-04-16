@@ -1765,6 +1765,11 @@ input, select, textarea {
 				height: 48px;
 			}
 
+		.image.chhota {
+			width: 25px;
+			height: 25px;
+		}	
+
 		.image.fit {
 			display: block;
 			width: 100%;
