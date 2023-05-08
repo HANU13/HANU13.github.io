@@ -151,7 +151,7 @@
 
 							<p>Reach Me Out.</p>
 
-							<form method="post" action="#">
+							<form onsubmit="sendEmail()"; reset(); return false;>              #method="post" action="#"
 								<div class="row">
 									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
@@ -165,6 +165,24 @@
 							</form>
 
 						</div>
+						<script src="https://smtpjs.com/v3/smtp.js"></script>
+						<script>
+							function sendEmail(){
+								Email.send({
+									Host : "smtp.elasticemail.com",
+									Username : "smartykoshti@gmail.com",
+									Password : "2AD2BFF3CC0A5101E0CF655BCF9D42A8FA66",
+									To : 'hanukoshti13@gmail.com',
+									From : document.getElementById("email").value,
+									Subject : "New Contact form enquiry",
+									Body : "Name: " + document.getElementById("name").value
+									    + "<br> Email: " + document.getElementById("email").value
+										+ "<br> Message: " + document.getElementById("message").value
+								}).then(
+								message => alert("Message sent successfully")
+								);
+							}
+						</script>
 					</section>
 
 			</div>
